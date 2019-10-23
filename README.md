@@ -19,7 +19,7 @@ System that predicts if a job invite received is real or a scam
  * pytesseract (python wrapper)
  * tesseract-ocr.exe gotten from https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w64-setup-v5.0.0-alpha.20191010.exe
 
-   pytesseract.pytesseract.tesseract_cmd = Installed location/folder
+   type pytesseract.pytesseract.tesseract_cmd = Installed location for tesseract-ocr in the python idle
  
    each of the main dependencies can be downloaded from cmd by pip install dependency
 
