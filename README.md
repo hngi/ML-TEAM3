@@ -6,34 +6,33 @@
 
 </div>
 
-# :page_with_curl: _isthisarealjob.com_
+#  _isthisarealjob.com_
 
-#### System that predicts if a job invite received is real or a scam
+# Predicting if a Job Invitation is Real or Fake
 
-# :page_with_curl: _Installation Guide_
+## INTRODUCTION
 
-**1)** Fire up your favourite console & clone this repo somewhere:
+This project is developed by members of Team 3, Machine learning track, HNG. It is built to be incorporated with www.isthisarealjob.com to determine if a job invitation received by a user is real or not.
 
-__`❍ git clone https://github.com/NotaNewbieCoder/ML-TEAM3.git`__
+## GETTING STARTED
+- Fire up your favourite console & clone this repo
+  `git clone https://github.com/NotaNewbieCoder/ML-TEAM3.git`
+- Enter this directory:
+  `cd ML-TEAM3`
+- Update pip:
+  `python -m pip install --upgrade pip`
 
-**2)** Enter this directory:
+### Requirements & Installations
+The required packages & modules for this project can be found in requirements.txt file
+Install them using `pip3 install -r requirements.txt`
 
-__`❍ cd ML-TEAM3`__
+### Configurations
 
-**3)** Update pip:
-
-__`❍ python -m pip install --upgrade pip`__
-
-**4)** Install other python packages/dependencies using the requirement file:
-
-__`❍ pip3 install -r requirements.txt`__
-
-**5)** Run the App:
-
-__`❍ python app.py`__
-
-**6)** Open your browser and type in this URL. Post a link to an article to be summarized:
-
-__`❍ http://127.0.0.1:5000/`__
+## How to Run this project
+- Open terminal in your IDE and run `python app.py`
+- Open your browser and type in this URL, `http://127.0.0.1:5000/`.
+- Post a link to an article to be summarized:
 
 __*Happy developing!*__
+
+## Built with Visual Studio Code by members of TEAM 3.
