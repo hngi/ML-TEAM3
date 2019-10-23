@@ -6,8 +6,7 @@ gunicorn
 pytesseract
 gingerit
 spacy
-en_core_web_sm #install by python -m spacy download en'
-PIL
+pillow
 nltk
 requests
 googlemaps
