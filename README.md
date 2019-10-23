@@ -1,26 +1,39 @@
-# ML-TEAM3
-System that predicts if a job invite received is real or a scam
+<div align="center">
 
-## Requirements
-* Libraries needed
-    * Beautiful Soup [BeautifulSoup](https://pypi.org/project/beautifulsoup4/)
-    * Matplotlib [Matplotlib](https://matplotlib.org/users/installing.html)
-    * Textblob [Textblob](https://textblob.readthedocs.io/en/dev/)
-* nlp_ner
-   This program takes-in data in picture or text format, determines what it is, extract the text and get the amount of errors 
-   in the document, also outputs the name of the company and location of the address found in the picture or text.
- 
-   Dependencies are:
+![hng](https://res.cloudinary.com/iambeejayayo/image/upload/v1554240066/brand-logo.png)
 
-   * nltk(stopwords, punkt tokenizer) for the sub-dependencies: python -m nltk.downloader punkt, python -m nltk.downloader stopwords
-   * gingerit
-   * pillow
-   * spacy   sub-dependency: python -m spacy download en
-   * pytesseract (python wrapper)
-   * tesseract-ocr.exe gotten from https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w64-setup-v5.0.0-alpha.20191010.exe
+<br>
 
-   type pytesseract.pytesseract.tesseract_cmd = Installed location for tesseract-ocr in the python idle
- 
-   each of the main dependencies can be downloaded from cmd by pip install dependency
+</div>
 
+# :page_with_curl: _isthisarealjob.com_
 
+#### System that predicts if a job invite received is real or a scam
+
+# :page_with_curl: _Installation Guide_
+
+**1)** Fire up your favourite console & clone this repo somewhere:
+
+__`❍ git clone https://github.com/NotaNewbieCoder/ML-TEAM3.git`__
+
+**2)** Enter this directory:
+
+__`❍ cd ML-TEAM3`__
+
+**3)** Update pip:
+
+__`❍ python -m pip install --upgrade pip`__
+
+**4)** Install other python packages/dependencies using the requirement file:
+
+__`❍ pip3 install -r requirements.txt`__
+
+**5)** Run the App:
+
+__`❍ python app.py`__
+
+**6)** Open your browser and type in this URL. Post a link to an article to be summarized:
+
+__`❍ http://127.0.0.1:5000/`__
+
+__*Happy developing!*__
