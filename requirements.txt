@@ -4,3 +4,5 @@ textblob
 flask
 gunicorn
 requests
+googlemaps
+pandas
