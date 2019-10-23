@@ -1,31 +1,20 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[4]:
-
-
+"""importing libraries"""
 import requests
 from bs4 import BeautifulSoup
 from textblob import TextBlob
-import matplotlib.pyplot as plt
 import urllib
+
 
 WordList = []
 
 
 def percentage(part, whole):
-    return 100 * float(part)/float(whole)
-
-
-def put_in_file():
-    global WordList
-    file_name = searchTerm + '.txt'
-    for word in WordList:
-        with open(file_name, "a+", encoding="utf-8") as f:
-            f.write(word)
+    """function to calculate percentage"""
+    return round((100 * float(part)/float(whole)),2)
 
 
 def word_count(string):
+    """function to return count of comments"""
     counts = dict()
     words = string.split()
 
@@ -39,6 +28,7 @@ def word_count(string):
 
 
 def search_item(search_term, next=False, page=0,  board=0):
+    """function to search and return comments"""
     if next == False:
         page = requests.get("https://www.nairaland.com/search?q=" + urllib.parse.quote_plus(str(search_term)) + "&board="+str(board))
     else:
@@ -52,6 +42,7 @@ def search_item(search_term, next=False, page=0,  board=0):
 
 
 def add_to_word_list(strings):
+    """function to add all comments to Wordlist"""
     global WordList
     k = 0
     while k < len(strings):
@@ -61,7 +52,7 @@ def add_to_word_list(strings):
 
 
 searchTerm = input("Enter search term: ")
-board = int(input("Enter Section: "))
+board = 29
 
 j = 0
 
@@ -79,7 +70,6 @@ positive = 0
 negative = 0
 neutral = 0
 
-put_in_file()
 
 previous = []
 
@@ -88,7 +78,7 @@ for tweet in WordList:
         continue
     previous.append(tweet)
     analysis = TextBlob(tweet)
-    #print(analysis.sentiment)
+    """evaluating polarity of comments"""
     polarity += analysis.sentiment.polarity
 
     if (analysis.sentiment.polarity == 0):
@@ -104,28 +94,15 @@ positive = percentage(positive, noOfSearchTerms)
 negative = percentage(negative, noOfSearchTerms)
 neutral = percentage(neutral, noOfSearchTerms)
 
-positive = format(positive, '.2f')
-neutral = format(neutral, '.2f')
-negative = format(negative, '.2f')
 
 print("How people are reacting on " + searchTerm + " by analyzing " + str(noOfSearchTerms) + " comments from "
       "on nairaland")
 
-if (polarity == 0):
-    print("Neutral")
-elif (polarity < 0):
-    print("Negative")
-elif (polarity > 0):
-    print("Positive")
+if (negative> 30):
+    print("There is a high percentage of negative comments about this Company online in regards to jobs")
+elif(negative>20):
+    print("There are some negative comments about this Company in regards to jobs" )
+elif (negative<20):
+    print("There is a low percentage of negative comments about this Company online in regards to jobs")
 
-labels = ['Positive [' + str(positive) + '%]', 'Neutral [' + str(neutral) + '%]', 'Negative [' + str(negative) + '%]']
-sizes = [positive, neutral, negative]
-colors = ['yellowgreen', 'gold', 'red']
-patches, texts = plt.pie(sizes, colors=colors, startangle=90)
-plt.legend(patches, labels, loc="best")
-plt.title('How people are reacting on ' + searchTerm + ' by analyzing ' + str(noOfSearchTerms) + ' comments '
-                                                                                                 'on nairaland.')
-plt.axis('equal')
-plt.tight_layout()
-plt.show()
 
