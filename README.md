@@ -31,7 +31,7 @@ Install them using `pip3 install -r requirements.txt`
 ## How to Run this project
 - Open terminal in your IDE and run `python app.py`
 - Open your browser and type in this URL, `http://127.0.0.1:5000/`.
-- Post a link to an article to be summarized:
+-  Or visit [Isthisarealjob](https://isthisarealjob.herokuapp.com)
 
 __*Happy developing!*__
 
