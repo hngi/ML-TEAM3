@@ -12,12 +12,12 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="{{ url_for('home')}}">Isthisarealjob.com</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+        </button> -->
+        <div class="" id="navbarNav">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('home')}}">Company Sentiment analysis</a>
                 </li>
@@ -48,6 +48,22 @@
         <h1>Result:</h1>
         <p> The extracted text from the image above is: <b> {{ extracted_text }} </b></p>
         {% endif %}
+    </div>
+
+    <div class="container">
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center" style="margin-top: 1px;">
+            <h1 class="display-4">How to use this Platform</h1>
+            <p class="lead">This platform can be used in verifying job invitatations. The company sentiment analysis
+                scrapes through nairaland comments and runs an analysis on what people are saying about the company<br>
+                The address verifier makes use of googlemaps api in verifying address. <br>
+                The invitation text checker checks for grammatical errors in the invitation sent by the company<br><br>
+                We also have a Document OCR(Optical Character Recognition) which can scan a picture and extract the text
+                in the
+                picture. <br><br> There is a Confidence checker but this can only be accessed after running the Company
+                Analysis,
+                Address Verification and Invitation text checker.
+            </p>
+        </div>
     </div>
 </body>
 
