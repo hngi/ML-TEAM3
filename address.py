@@ -2,8 +2,7 @@ import nlp
 import pandas as pd
 import googlemaps
 
-gmaps = googlemaps.Client(key='AIzaSyAlvT9QoXecXq_WFfd4_slajtCnMJBXB6Y')
-
+gmaps = googlemaps.Client(key='INSERT KEY HERE')
 dataframe = pd.read_csv('isthisarealjob_table_posts.csv')
 dataframe = dataframe.drop(['3', '4', '2018-02-28 00:14:37', '2018-02-28 00:14:37.1', 'hello-world-071235157V21576', 'world,good', 'Unnamed: 9', 'NULL', 'NULL.1'], axis= 1)
 dataframe = dataframe[['danny', '#world is greater than #good things', 'Hello World']]
