@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 from textblob import TextBlob
 import urllib
 
-
+"""initilizing Word list"""
 WordList = []
 
 
